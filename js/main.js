@@ -19,6 +19,7 @@ $( "a" ).on( "click", function( event ) {
 $(function(){
   $( "header" ).bind( "taphold", tapholdHandler );
   function tapholdHandler( event ){
-    $.mobile.navigate("#data-log");
+    $.mobile.navigate("#data-log", { transition: "flip"});
+    // $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash: false });
   }
 });
