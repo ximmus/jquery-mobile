@@ -9,53 +9,23 @@
       <script src="js/main.js" defer></script>
   </head>
   <body>
-    <!-- First Page -->
-    <div data-role="page" id="page-one">
- 
-        <header data-role="header" data-position="fixed">
-          <h1>Page One</h1>
-          <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home ui-btn-icon-notext"></a>
-        </header><!-- /header -->
+    <!-- Login Page -->
+    <div id="dialog-page" data-role="page" data-dialog="true" data-close-btn="none">
  
         <div role="main" class="ui-content">
-            <p>Hello, Page One!</p>
-            <a href="#page-two" class="ui-btn">Page Two</a>
-
-            <a href="dialog.html" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Open dialog</a>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Employee Email" value="">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password" value="" autocomplete="off">
+            <label for="slider-flip-m">Remember Me?</label>
+            <select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+                <option value="off" selected="">No</option>
+                <option value="on">Yes</option>
+            </select>
+            <a href="page-home.html" class="ui-btn">Log In</a>
         </div><!-- /content -->
  
     </div>
-    <!-- / #page-one -->
-    
-    <!-- Page Two -->
-    <div data-role="page" id="page-two">
- 
-        <header data-role="header" data-position="fixed">
-          <h1>Page Two</h1>
-          <a href="#page-one" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home ui-btn-icon-notext"></a>
-        </header><!-- /header -->
- 
-        <div role="main" class="ui-content">
-            <p>Hello, Page Two!</p>
-            <a href="#page-one" class="ui-btn">Page One</a>
-        </div><!-- /content -->
- 
-    </div>
-    <!-- / #page-two -->
-
-    <!-- Data Log -->
-    <div data-role="page" id="data-log">
- 
-        <header data-role="header" data-position="fixed">
-          <h1>Data Log</h1>
-          <a href="#page-one" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home ui-btn-icon-notext"></a>
-        </header><!-- /header -->
- 
-        <div role="main" class="ui-content">
-            <p>This is the Data Log page</p>
-        </div><!-- /content -->
- 
-    </div>
-    <!-- / #page-two -->
+    <!-- / #dialog-page -->
   </body>
 </html>

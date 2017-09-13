@@ -1,0 +1,7 @@
+.ui-icon-myicon:after {
+	background-image: url("images/iconimg.svg");
+}
+/* Fallback */
+.ui-nosvg .ui-icon-myicon:after {
+	background-image: url("iconimg.png");
+}

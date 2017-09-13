@@ -15,11 +15,17 @@ $( "a" ).on( "click", function( event ) {
 	// alterContent( $(this).attr("href") );
 });
 
-// Navigate to the data-log page on longhold of header bar.
-$(function(){
-  $( "header" ).bind( "taphold", tapholdHandler );
-  function tapholdHandler( event ){
-    $.mobile.navigate("#data-log", { transition: "flip"});
-    // $.mobile.changePage( "../resources/us.html", { transition: "slideup", changeHash: false });
-  }
-});
+// AJAX Success!
+// Fires everytime there's a successful ajax request completed. Useful to call functions that need to run on the newly rendered content.
+$(document).ajaxSuccess(function() {
+	
+	// Navigate to the data-log page on longhold of header bar.
+	$(function(){
+		$( "header" ).bind( "taphold", tapholdHandler ).disableSelection();
+	  	function tapholdHandler( event ){
+	  		event.preventDefault();
+	    	$.mobile.navigate("page-datalog.html", { transition: "flip"});
+	  	}
+	});
+
+}); // END ajaxSuccess()
